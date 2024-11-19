@@ -1,0 +1,5 @@
+langchain
+langchain-groq
+chainlit
+PyPDF2
+python-docx
