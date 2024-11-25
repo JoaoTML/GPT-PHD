@@ -13,3 +13,11 @@
 **Step 5**: Enjoy our tool.
 
 **Groq API key**: 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
+
+
+#How to put online.
+
+First create a account on render.
+After that chose the website option and chose this github
+In the settings, on start command put uvicorn runner:app --host 0.0.0.0 --port 80
+Then go to the enviroment option and put the groq_api_key
