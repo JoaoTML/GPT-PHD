@@ -1,14 +1,5 @@
-# Welcome to Chainlit! 🚀🤖
+# Bem-vindo ao TobIAS! 🎓🤖
 
-Hi there, Developer! 👋 We're excited to have you on board. Chainlit is a powerful tool designed to help you prototype, debug and share applications built on top of LLMs.
+O TobIAS é um companheiro desenhado para ajudar os estudantes portugueses mais jovens. Caso um estudante tenha uma dúvida durante a resolução dos seus trabalhos de casa, o TobIAS irá guiá-lo de modo que o estudante alcance a resposta correta por ele mesmo de modo a promover o pensamento crítico. 
 
-## Useful Links 🔗
-
-- **Documentation:** Get started with our comprehensive [Chainlit Documentation](https://docs.chainlit.io) 📚
-- **Discord Community:** Join our friendly [Chainlit Discord](https://discord.gg/k73SQ3FyUh) to ask questions, share your projects, and connect with other developers! 💬
-
-We can't wait to see what you create with Chainlit! Happy coding! 💻😊
-
-## Welcome screen
-
-To modify the welcome screen, edit the `chainlit.md` file at the root of your project. If you do not want a welcome screen, just leave this file empty.
+Esta ferramenta foi implementada por um grupo de estudantes no Mestrado de Inteligência Artificial como projeto final para a unidade curricular de Inteligência Artificial e Sociedade.

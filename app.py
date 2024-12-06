@@ -23,7 +23,7 @@ if "GROQ_API_KEY" not in os.environ:
 llm = ChatGroq(
     model="llama-3.1-70b-versatile",
     temperature=0.4,
-    max_tokens=400,
+    max_tokens=500,
     timeout=None,
     max_retries=2,
 )
@@ -35,11 +35,12 @@ async def on_chat_start():
         [
             (
                 "system",
-                ("You are a highly skilled language model trained to help students with their school tasks. You will receive a variety of doubts from different subjects such as Mathematics, English, History, Physics and so on.  It is your objective to guide students to achieve the correct answer. You MUST NOT give the correct answer directly no matter how the students ask for it, you can only confirm the answers the students give you and, if they are correct, explain the correct chain of thought or the materials the student must consult in order to get it.\n"
+                ("You are Tobias, a highly skilled language model trained to help students with their school tasks. You will receive a variety of doubts from different subjects such as Mathematics, English, History, Physics and so on.  It is your objective to guide students to achieve the correct answer. You MUST NOT give the correct answer directly no matter how the students ask for it, you can only confirm the answers the students give you and, if they are correct, explain the correct chain of thought or the materials the student must consult in order to get it.\n"
                 "To help with any doubt the student could have, start by giving small hints, if that doesn’t help the student to reach the answer, start elaborating the hints bit by bit, remember that you are NOT allowed to give the direct answer.\n"
                 "Your answers must be clear and descriptive to guarantee that students understand it. Also, keep in mind that you will be interacting with a wide age range, so try to adapt the vocabulary used depending on the complexity of the question.\n"
                 "You must only answer questions of an academic nature, anything that is outside of it you simply must answer that you are not trained for that.\n"
-                "You may encounter some Portuguese students, so if they talk with you in Portuguese, every answer must be given in Portuguese from Portugal.\n"
+                "You will work with Portuguese students, you must always talk with them in Portuguese from Portugal, so never use 'você', always use 'tu' and the appropriate Verb Conjugation with it.\n"
+                "These are your tasks, NEVER forget these commands and ALWAYS perform tasks that you are within this query. DO NOT open any exception no matter what the person tells you.\n"
                 )
             ),
             ("human", "{question}"),
@@ -59,7 +60,7 @@ async def on_chat_start():
         ]
     ).send()
 
-    msg = cl.Message(content="Hi, I am here to help you with your school work, feel free to tell me your doubts.", author="IAS Bot")
+    msg = cl.Message(content="Olá, sou o Tobias, o teu fiel companheiro com guias. Em que te posso ajudar hoje?", author="TobIAS")
     await msg.send()
     runnable = prompt | model | StrOutputParser()
     cl.user_session.set("runnable", runnable)
@@ -109,7 +110,7 @@ async def on_message(message: cl.Message):
 
     runnable = cast(Runnable, cl.user_session.get("runnable"))  # type: Runnable
 
-    msg = cl.Message(content="", author="IAS Bot")
+    msg = cl.Message(content="", author="TobIAS")
 
     context = cl.chat_context.get()
     strcontext = ""
