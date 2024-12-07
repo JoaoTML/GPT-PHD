@@ -14,8 +14,8 @@ from docx import Document
 from chainlit.input_widget import Slider
 
 if "GROQ_API_KEY" not in os.environ:
-    os.environ["GROQ_API_KEY"] = getpass.getpass("Enter your Groq API key: ")
-
+    #os.environ["GROQ_API_KEY"] = getpass.getpass("Enter your Groq API key: ")
+    print('a')
 llm = ChatGroq(
     model="llama-3.1-70b-versatile",
     temperature=0.4,
