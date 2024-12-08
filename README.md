@@ -21,7 +21,7 @@
 
 **Step 2**: After that chose the **Web Services** option and chose [this github repository](https://github.com/JoaoTML/GPT-PHD).
 
-**Step 3**: In the settings, on the start command put **uvicorn runner:app --host 0.0.0.0 --port 80**.
+**Step 3**: In the settings, on the start command insert **uvicorn runner:app --host 0.0.0.0 --port 80**.
 
 **Step 4**: Then go to the enviroment variables and put the **GROP_API_KEY** variable and the respective value.
 
