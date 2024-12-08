@@ -23,6 +23,6 @@
 
 **Step 3**: In the settings, on the start command insert **uvicorn runner:app --host 0.0.0.0 --port 80**.
 
-**Step 4**: Then go to the enviroment variables and put the **GROQ_API_KEY** variable and the respective value.
+**Step 4**: Then go to the enviroment variables and insert the **GROQ_API_KEY** variable and the respective value.
 
 **Groq API key**: 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
